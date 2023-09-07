@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function ResidentsShow() {
     const width = "w-8 aspect-square";
@@ -31,11 +32,13 @@ export default function ResidentsShow() {
 
 
   return (
-    <ul className="flex flex-row gap-2 ml-6 overflow-y-auto">
+    <ul className="flex flex-row gap-2 ml-6 overflow-y-auto pb-4">
           {typeOfResidents.map(({ residentType, svg}=resident, index) => (
             <li className="px-6 py-4 w-24 aspect-square text-gray-500 hover:text-gray-800 hover:underline hover:underline:transition hover:decoration-2 hover:underline-offset-8 active:text-gray-950 space-y-2" key={index}>
+              <Link href={"#"}>
                 {svg}
                 <p className="font-semibold text-sm">{residentType}</p>
+              </Link>
             </li>
             ))}
     </ul>
