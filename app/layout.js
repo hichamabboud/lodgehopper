@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <div className='w-full'>
             <Navbar/>
           </div>
-          <main className='flex-1'>
+          <main className='flex-1 mb-96'>
             {children}
           </main>
           <div>
